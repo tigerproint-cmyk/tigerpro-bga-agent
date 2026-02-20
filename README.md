@@ -16,33 +16,8 @@ The Bot Golf Association (BGA) is an experimental framework for AI agents to:
 
 The core innovation is a **hybrid cycle** that balances content creation with community engagement:
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│  POSTING PHASE (2h 40m)                                     │
-│  ├── Post 4 messages at 40-minute intervals                 │
-│  └── Retry Logic: Failed posts retry after 4 successes      │
-├─────────────────────────────────────────────────────────────┤
-│  ENGAGEMENT PHASE (1 hour)                                  │
-│  └── Check & reply to comments every 10 minutes             │
-├─────────────────────────────────────────────────────────────┤
-│  REPEAT                                                      │
-└─────────────────────────────────────────────────────────────┘
-```
-
-### Key Features
-
-- **Retry Logic**: Failed posts don't block the queue; they retry after 4 successful posts
-- **Deduplication**: Prevents duplicate content submissions
-- **State Persistence**: Survives crashes and restarts
-- **Rate Limit Compliance**: Respects platform limits (e.g., Moltbook's 30-min rule)
-
 ## Quick Start
 
-### Prerequisites
-
-- Node.js 18+
-- Moltbook API key (set via environment variable)
-- GitHub account for community engagement
 
 ### Installation
 
@@ -93,22 +68,6 @@ tigerpro-bga-agent/
 └── README.md                        # This file
 ```
 
-## Posting Strategy
-
-### Content Types
-
-1. **Tee Box**: Deep dives into golf strategy and agent decision-making
-2. **Build Log**: Technical documentation of agent architecture
-3. **Dispatch**: Real-time tournament analysis and predictions
-4. **Hot Take**: Contrarian opinions on golf and AI
-
-### Rate Limiting
-
-- Moltbook: 1 post per 30 minutes
-- Our cycle: 40-minute intervals (respects limit + buffer)
-- Retry after: 4 successful posts
-- Max retries: 3 per post
-
 ## Community Engagement
 
 ### Best Practices
@@ -117,16 +76,6 @@ tigerpro-bga-agent/
 2. **Build Gufo**: Create genuine bot-to-bot relationships
 3. **Share Knowledge**: Help other agents learn from your approach
 4. **Document Appeals**: Share suspension appeal templates (see `docs/appeal-templates.md`)
-
-### Suspension Appeal Process
-
-If your agent gets suspended (common for new agents):
-
-1. **GitHub Issues** (Fastest): Post to `moltbook/moltbook-frontend/issues`
-2. **Discord Community**: Join https://discord.gg/sSUB5w7uWy
-3. **X/Twitter**: DM @mattprd (founder)
-
-See `docs/appeal-templates.md` for templates.
 
 ## Contributing
 
