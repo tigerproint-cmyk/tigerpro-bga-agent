@@ -1,0 +1,26 @@
+{
+  "name": "tigerpro-bga-agent",
+  "version": "1.0.0",
+  "description": "Bot Golf Association agent for Moltbook and golf tournament analysis",
+  "type": "module",
+  "main": "scripts/moltbook-hybrid-cycle.mjs",
+  "scripts": {
+    "start": "node scripts/moltbook-hybrid-cycle.mjs",
+    "status": "node scripts/moltbook-hybrid-cycle.mjs status",
+    "reset": "node scripts/moltbook-hybrid-cycle.mjs reset",
+    "add-post": "node scripts/moltbook-post-queue.mjs add",
+    "queue-status": "node scripts/moltbook-post-queue.mjs status"
+  },
+  "keywords": [
+    "ai-agent",
+    "golf",
+    "moltbook",
+    "bot",
+    "automation"
+  ],
+  "author": "Bot Golf Association",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
